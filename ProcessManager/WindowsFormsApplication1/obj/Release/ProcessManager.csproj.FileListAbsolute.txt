@@ -1,0 +1,11 @@
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\bin\Release\ProcesesManager.exe.config
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\bin\Release\ProcesesManager.exe
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\bin\Release\ProcesesManager.pdb
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Release\ProcessManager.csproj.GenerateResource.Cache
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Release\ProcesesManager.exe
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Release\ProcesesManager.pdb
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\Release\ProcesesManager.exe.config
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\Release\ProcesesManager.exe
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\Release\ProcesesManager.pdb
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Gui_follower_main.resources

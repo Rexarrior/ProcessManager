@@ -9,17 +9,18 @@ using ProcessManager;
 
 namespace KillingCostlyDaemon
 {
-    class Daemon
+    class Controller
     {
         static int DEFAULTINTERVAL = 600000; //one minute
         
 
-        void run(string initialString)
+        void DaemonCycle(string initialString)
         {
+            /*
             string[] arr = new string[1];
             arr[0] = initialString;
             System.IO.File.WriteAllLines("log.txt",arr );
-
+            */
 
             Manager manager = new Manager(initialString);
             manager.IsAutomaticControl = false;
@@ -42,8 +43,8 @@ namespace KillingCostlyDaemon
                 
             }
 
-            Daemon daemon = new Daemon();
-            daemon.run(args.Aggregate("", (acum, x) => acum + ' ' + x));
+            Controller daemon = new Controller();
+            daemon.DaemonCycle(args.Aggregate("", (acum, x) => acum + ' ' + x));
 
 
         }

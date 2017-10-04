@@ -8,7 +8,7 @@ namespace CMValue
     
     
     public enum TypeValue { CPU, Memory };
-    public enum LetterValue { Percent, B, Kb, Mb, Gb, Gc, Kgc, Mgc, Ggc };
+    public enum LetterValue { B, Kb, Mb, Gb, Gc, KGc, MGc, GGc, Percent, PercentDevideTen, PercentDevideTenTwice };
     public class C_M_Value
     {
         //private members--------------------------------------------------------------------------------------------------
@@ -18,10 +18,10 @@ namespace CMValue
         private TypeValue _type;
 
 
-        private void letterCheck(LetterValue letter)
+        private void _letterCheck(LetterValue letter)
         {
 
-            bool isCPUError = _type == TypeValue.CPU && letter < LetterValue.Gc && letter != LetterValue.Percent;
+            bool isCPUError = _type == TypeValue.CPU && letter < LetterValue.Gc;
             bool isMemoryError = _type == TypeValue.Memory && letter > LetterValue.Gc && letter < LetterValue.B;
 
 
@@ -30,6 +30,27 @@ namespace CMValue
                     this.Type + ' ' + letter , "letter,type");
 
         }
+
+
+
+        private bool _checkCountForPercent(uint count, LetterValue letter)
+        {
+            switch (letter)
+            {
+                case LetterValue.Percent:
+                    return count <= 100;
+
+                case LetterValue.PercentDevideTen:
+                    return count <= 1000;
+
+                case LetterValue.PercentDevideTenTwice:
+                    return count <= 10000;
+                default:
+                    throw new ArgumentException("Суффикс(letter) задан неверно - не задает процент", "letter");
+            } 
+        }
+
+
 
         //public members---------------------------------------------------------------------------------------------------
 
@@ -90,7 +111,7 @@ namespace CMValue
                 letter++;
             }
 
-            letterCheck(letter);
+            _letterCheck(letter);
             _letter = letter;
             _count = (uint)value;
             return this;
@@ -101,9 +122,9 @@ namespace CMValue
 
         public C_M_Value ReInit(uint count, LetterValue letter)
         {
-            letterCheck(letter);
-            if (letter == LetterValue.Percent)
-                if (count <= 100)
+            _letterCheck(letter);
+            if (letter >= LetterValue.Percent)
+                if (_checkCountForPercent(count, letter))
                 {
                     _count = count;
                     _letter = letter;
@@ -111,7 +132,7 @@ namespace CMValue
                     return this;
                 }
                 else
-                    throw new ArgumentException("Значение в процентах не должно превышать 100", "count");
+                    throw new ArgumentException("Значение в процентах вышло за пределы 100%. Проверьте пару count-letter", "count");
 
 
 
@@ -119,12 +140,21 @@ namespace CMValue
             _count = count;
             uint size = count;
 
-            //TODO работает только для памяти
-            while (letter > LetterValue.B)
+
+
+            uint mn = (uint)(_type == TypeValue.CPU ? 1000 : 1024);
+            LetterValue firstLetter = (_type == TypeValue.CPU) ? LetterValue.Gc : LetterValue.B;
+            while (letter > firstLetter)
             {
-                size *= 1024;
-                letter--;
+               size *= mn;
+               letter--;
             }
+            
+
+
+
+
+
             _size = size;
             return this;
         }
@@ -158,14 +188,8 @@ namespace CMValue
 
             _type = int.Parse(initArrStr[0]) ==0 ? TypeValue.CPU : TypeValue.Memory ;
             uint count = uint.Parse(initArrStr[1]) ;
-
-            LetterValue letter = LetterValue.B;
-            if (initArrStr[2] == "0")
-                letter = LetterValue.Percent;
-            else
-                for (int i = 1; i < int.Parse(initArrStr[2]); i++)
-                    letter++;
-
+           
+            LetterValue letter = (LetterValue)int.Parse(initArrStr[2]);
             ReInit(count, letter);
 
            

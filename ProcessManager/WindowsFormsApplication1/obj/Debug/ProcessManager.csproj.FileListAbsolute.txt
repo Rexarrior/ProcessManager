@@ -1,9 +1,8 @@
-C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
-C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Debug\ProcessManager.csprojResolveAssemblyReference.cache
 C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
 C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Debug\ProcessManager.csproj.GenerateResource.Cache
-C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Gui_main.resources
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\bin\Debug\ProcesesManager.exe.config
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\bin\Debug\ProcesesManager.exe
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\bin\Debug\ProcesesManager.pdb
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Debug\ProcesesManager.exe
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Debug\ProcesesManager.pdb
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Gui_follower_main.resources

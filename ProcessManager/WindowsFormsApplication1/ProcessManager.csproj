@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WindowsFormsApplication1</RootNamespace>
-    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <AssemblyName>ProcesesManager</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -27,7 +27,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -48,19 +48,19 @@
   <ItemGroup>
     <Compile Include="c_m_value.cs" />
     <Compile Include="Logger.cs" />
-    <Compile Include="Gui_main.cs">
+    <Compile Include="Gui_follower_main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gui_main.Designer.cs">
-      <DependentUpon>Gui_main.cs</DependentUpon>
+    <Compile Include="Gui_follower_main.Designer.cs">
+      <DependentUpon>Gui_follower_main.cs</DependentUpon>
     </Compile>
     <Compile Include="Analyzer.cs" />
-    <Compile Include="GuiFollower_main.cs" />
+    <Compile Include="main.cs" />
     <Compile Include="manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Support.cs" />
-    <EmbeddedResource Include="Gui_main.resx">
-      <DependentUpon>Gui_main.cs</DependentUpon>
+    <EmbeddedResource Include="Gui_follower_main.resx">
+      <DependentUpon>Gui_follower_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

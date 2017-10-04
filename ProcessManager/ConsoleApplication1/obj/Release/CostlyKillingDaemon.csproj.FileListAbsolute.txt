@@ -1,0 +1,11 @@
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\ConsoleApplication1\bin\Release\daemon.exe.config
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\ConsoleApplication1\bin\Release\daemon.exe
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\ConsoleApplication1\bin\Release\daemon.pdb
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\ConsoleApplication1\bin\Release\ProcesesManager.exe
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\ConsoleApplication1\bin\Release\ProcesesManager.pdb
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\ConsoleApplication1\obj\Release\CostlyKillingDaemon.csprojResolveAssemblyReference.cache
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\ConsoleApplication1\obj\Release\daemon.exe
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\ConsoleApplication1\obj\Release\daemon.pdb
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\Release\daemon.exe.config
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\Release\daemon.exe
+C:\Users\ksandr\Documents\Visual Studio 2015\Projects\ProcessManager\Release\daemon.pdb

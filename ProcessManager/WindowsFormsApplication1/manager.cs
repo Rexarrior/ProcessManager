@@ -20,7 +20,8 @@ namespace ProcessManager
 
         private Timer _timer;
         private Process _daemon;
-        private UInt64 _pause;  
+        private UInt64 _pause;
+        private Process _thisProcess;
 
 
         private IEnumerable<Process> _costlyProceses;
@@ -29,10 +30,13 @@ namespace ProcessManager
         private C_M_Value _memoryLevel;
         private ProcessAnalyzer _analyzer;
 
+        
+
         private bool _isAutomaticUpdate;
         private bool _isAutomaticControl;
         private bool _isKilling;
         private bool _isEconomy;
+
 
        
 
@@ -40,14 +44,7 @@ namespace ProcessManager
         
         //methods----------------------------------------------------------------------------------------------------------
 
-        private string _toInitialString()
-        {
-            string res = "";
-
-
-
-            return res;
-        }
+       
 
         private void _onTime(Object source, System.Timers.ElapsedEventArgs e)
         {
@@ -67,8 +64,7 @@ namespace ProcessManager
             _timer.Elapsed += _onTime;
             _timer.AutoReset = true;
             _costlyProceses = _analyzer.GetMoreThanDoorstepProcess();
-            _daemon = new Process();
-
+            _thisProcess = Process.GetCurrentProcess();
 
         }
         
@@ -146,6 +142,8 @@ namespace ProcessManager
                 _isEconomy = value;
             }
         }
+
+        
 
         public C_M_Value CPUlevel
         {
@@ -251,15 +249,20 @@ namespace ProcessManager
 
 
 
-        public void RunDaemon()
+        public Process RunDaemon()
         {
-            
+            _daemon = new Process();
+
 
             _daemon.StartInfo.CreateNoWindow =true;
             _daemon.StartInfo.UseShellExecute = false;
             _daemon.StartInfo.Arguments = this.GetInitialString();
             _daemon.StartInfo.FileName = Directory.GetCurrentDirectory() + "\\daemon.exe";
+            
+              
+            _daemon.StartInfo.Password = _thisProcess.StartInfo.Password;
             _daemon.Start();
+            return _daemon;
            
         }
 
