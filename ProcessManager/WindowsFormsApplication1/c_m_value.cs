@@ -96,6 +96,7 @@ namespace CMValue
             }
         }
 
+
         public C_M_Value ReInit(UInt64 size)
         {
             const UInt64 TERRABYTE = 1099511627776;
@@ -169,22 +170,28 @@ namespace CMValue
         }
 
 
+
         public C_M_Value(TypeValue type, uint count, LetterValue letter)
         {
             _type = type;
             ReInit(count, letter);
         }
 
+
+
         public string GetInitialString()
         {
             return "" + (int)_type + ' ' + _count + ' ' + (int)_letter;
         }
 
+
+
         public C_M_Value(string initialString)
         {
             string[] initArrStr = initialString.Trim(' ').Split(' ');
 
-           //System.IO.File.WriteAllText("log1.txt", System.IO.File.ReadAllText("log1.txt") + "Initial str: " + initialString);
+            // System.IO.File.WriteAllText("log1.txt", System.IO.File.ReadAllText("log1.txt") 
+            // + "Initial str: " + initialString);
 
             _type = int.Parse(initArrStr[0]) ==0 ? TypeValue.CPU : TypeValue.Memory ;
             uint count = uint.Parse(initArrStr[1]) ;

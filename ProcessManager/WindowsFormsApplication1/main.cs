@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
     static class main
     {
         /// <summary>
-        /// Главная точка входа для приложения.
+        /// Точка входа  приложения.
         /// </summary>
         [STAThread]
         static void Main()

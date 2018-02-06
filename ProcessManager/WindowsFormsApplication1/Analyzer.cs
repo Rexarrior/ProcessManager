@@ -90,6 +90,8 @@ namespace ProccessAnalize
             }
         }
 
+
+
         public C_M_Value DoorstepCPU
         {
             get
@@ -102,6 +104,8 @@ namespace ProccessAnalize
                 _doorstepCPU = value;
             }
         }
+
+
 
         public bool IsUpdateByInvoke
         {
@@ -126,6 +130,8 @@ namespace ProccessAnalize
             _selectLessAndMorehanDoorstep();
 
         }
+
+
 
         public IEnumerable<Process> GetAllProcess()
         {
@@ -165,6 +171,7 @@ namespace ProccessAnalize
         }
 
 
+
         public ProcessAnalyzer(C_M_Value doorstepMemory, C_M_Value doorstepCPU, bool isUpdateByInvoke = true)
         {
             this._doorstepMemory = doorstepMemory;
@@ -172,6 +179,8 @@ namespace ProccessAnalize
             this._isUpdateByInvoke = isUpdateByInvoke;
             Update();
         }
+
+
 
         public ProcessAnalyzer(string initialString)
         {

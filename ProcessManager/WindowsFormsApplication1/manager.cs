@@ -58,6 +58,7 @@ namespace ProcessManager
         }
 
 
+
         private void _commonPartInit()
         {
             _timer = new Timer(PauseInterval);
@@ -90,6 +91,8 @@ namespace ProcessManager
             }
         }
 
+
+
         public bool IsAutomaticUpdate
         {
             get
@@ -104,6 +107,8 @@ namespace ProcessManager
             }
         }
 
+
+
         public bool IsAutomaticControl
         {
             get
@@ -117,6 +122,8 @@ namespace ProcessManager
             }
         }
 
+
+
         public bool IsKilling
         {
             get
@@ -129,6 +136,8 @@ namespace ProcessManager
                 _isKilling = value;
             }
         }
+
+
 
         public bool IsEconomy
         {
@@ -159,6 +168,7 @@ namespace ProcessManager
             }
         }
 
+
         public C_M_Value MemoryLevel
         {
             get
@@ -173,7 +183,7 @@ namespace ProcessManager
             }
         }
 
-        //events
+        //events-----------------------------------------------------------------------------------------------------------
 
 
 
@@ -226,11 +236,15 @@ namespace ProcessManager
             return true;
         }
 
+
+
         public bool CloseProcess(string processName)
         {
             return Process.GetProcessesByName(processName).Select(x => CloseProcess(x)).Aggregate(true, (acum, x) => x && acum);
 
         }
+
+
 
         public bool CloseAllCostly()
         {
@@ -238,10 +252,14 @@ namespace ProcessManager
         }
 
 
+
         public void RunAutomatic()
         {
             _timer.Start();
         }
+
+
+
         public void StopAutomatic()
         {
             _timer.Stop();
@@ -265,6 +283,7 @@ namespace ProcessManager
             return _daemon;
            
         }
+
 
 
         public void StopDaemon()
@@ -310,6 +329,9 @@ namespace ProcessManager
 
 
         }
+
+
+
         public Manager(string initialString)
         {
 
